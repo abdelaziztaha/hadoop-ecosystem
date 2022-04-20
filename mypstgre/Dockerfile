@@ -1,5 +1,0 @@
-FROM postgres:latest
-ENV POSTGRES_PASSWORD mydb
-ENV POSTGRES_DB mydb
-
-

@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# This script should be run before starting the docker-expose
+# This is the place to create setings in the host (outside the containers
+# such as common folders, etc.
 
 DRIVER_NAME=postgresql-42.3.4.jar
 sudo mkdir /datalake/

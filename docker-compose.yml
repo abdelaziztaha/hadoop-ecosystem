@@ -12,6 +12,7 @@ services:
     ports:
       - "9870:9870"
     container_name: namenode
+ 
   datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     volumes:
@@ -23,6 +24,7 @@ services:
     ports:
       - "9864:9864"
     container_name: datanode
+
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
     env_file:
@@ -33,6 +35,7 @@ services:
     ports:
       - "10000:10000"
     container_name: hive-server
+
   hive-metastore:
     image: bde2020/hive:2.3.2-postgresql-metastore
     env_file:
@@ -45,20 +48,9 @@ services:
     expose:
       - "9083"
     container_name: hive-metastore
+
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:latest
-    #build: ./mypstgre
-    #container_name: hive-metastore-postgresql
-    #ports:
-    #   - "5432:5432"
-    
-    #image: postgres:latest
-    #restart: always
-    #environment:
-    #  - POSTGRES_USER=hive
-    #  - POSTGRES_PASSWORD=hive
-    #ports:
-    #  - '5432:5432'
     container_name: hive-metastore-postgresql
 
   #hive-metastore-mysql:

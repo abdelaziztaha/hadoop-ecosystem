@@ -86,9 +86,8 @@ services:
       net_pet:
         ipv4_address: 172.27.1.15
  
-  nifi:
-    build: ./nifi 
-    #image: apache/nifi:latest
+  nifi: 
+    image: apache/nifi:latest
     container_name: nifi
     ports:
       - 9999:9999

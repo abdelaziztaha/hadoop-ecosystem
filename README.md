@@ -1,12 +1,12 @@
 
 
-*To run:*
+**To run:**
 
 3- Execute the init.sh bash script
 
 2- run: docker-compose up
 
-*To Test (wait until docker-compose completely run, it can take up 5 min):*
+**To Test (wait until docker-compose completely run, it can take up 5 min):**
 
 1- Testing Hadoop: .....
 

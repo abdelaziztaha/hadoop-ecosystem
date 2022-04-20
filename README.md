@@ -1,6 +1,6 @@
 **Sandbox for Big Data (Hadoop/Hive/NiFi):**
 
-This Big Data Ecosystem is still not complete, but can already be done and
+This Big Data Ecosystem is still not complete, but can already be run and tested
 
 
 **To run:**

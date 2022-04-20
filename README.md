@@ -26,6 +26,7 @@ docker-compose exec hive-server bash
 /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
 
 ***Testing NiFi:***
+
 Open the browser with http://localhost:9999 to test nifi (Note that the jdbc drivers for the hive metastor are already saved in the container in the mounted directory /opt/datalake/nifi/drivers/postgresql-42.3.4.jar) 
 
 !! Note that your settings in NiFi will be lost after restarting the container. A fix for this is comming soon.

@@ -99,13 +99,16 @@ services:
       - NIFI_ELECTION_MAX_WAIT=1 min 
       - NIFI_SENSITIVE_PROPS_KEY=iksefhisfuzufdsfs
     volumes:
-      - /opt/datalake/nifi/:/opt/datalake/nifi/   
+      - ./drivers:/drivers   
     networks:
       net_pet:
         ipv4_address: 172.27.1.18   
 volumes:
   namenode:
   datanode:
+  nifi:
+  
+ 
 
 networks:
   net_pet:

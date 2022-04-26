@@ -99,16 +99,18 @@ services:
       - NIFI_ELECTION_MAX_WAIT=1 min 
       - NIFI_SENSITIVE_PROPS_KEY=iksefhisfuzufdsfs
     volumes:
-      - ./drivers:/drivers   
+      - ./drivers:/drivers
+      - nifi-conf:/opt/nifi  
     networks:
       net_pet:
         ipv4_address: 172.27.1.18   
 volumes:
   namenode:
   datanode:
-  nifi:
-  
- 
+  nifi-conf:
+     driver: local
+
+   
 
 networks:
   net_pet:

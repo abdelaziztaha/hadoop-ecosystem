@@ -1,10 +1,33 @@
-version: "3"
+version: "3.7"
 
 services:
+  hue:
+      image: gethue/hue:latest
+      hostname: hue
+      container_name: hue
+      dns: 8.8.8.8
+      ports:
+      - "8888:8888"
+      volumes:
+         - ${VOLUME_ROOT}/hue/hue-conf/hue-overrides.ini:/usr/share/hue/desktop/conf/z-hue.ini
+         #- ${VOLUME_ROOT}/hue/hue-conf/:/usr/share/hue/desktop/conf/
+      depends_on:
+         - "mysql"
+      networks:
+        net_pet:
+          ipv4_address: 172.27.1.13
+
+
+  hadoopbase:
+    image: bde2020/hadoop-base:latest
+    container_name: hadoopbase
+   
   namenode:
-    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-namenode:latest
     volumes:
-      - namenode:/hadoop/dfs/name
+      - type: bind
+        source: ${VOLUME_ROOT}/hadoop/dfs/name
+        target: /hadoop/dfs/name
     environment:
       - CLUSTER_NAME=test
     env_file:
@@ -14,9 +37,11 @@ services:
     container_name: namenode
  
   datanode:
-    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    image: bde2020/hadoop-datanode:latest
     volumes:
-      - datanode:/hadoop/dfs/data
+      - type: bind
+        source: ${VOLUME_ROOT}/hadoop/dfs/name
+        target: /hadoop/dfs/data
     env_file:
       - ./hadoop-hive.env
     environment:
@@ -26,7 +51,7 @@ services:
     container_name: datanode
 
   hive-server:
-    image: bde2020/hive:2.3.2-postgresql-metastore
+    image: bde2020/hive:latest
     env_file:
       - ./hadoop-hive.env
     environment:
@@ -37,7 +62,7 @@ services:
     container_name: hive-server
 
   hive-metastore:
-    image: bde2020/hive:2.3.2-postgresql-metastore
+    image: bde2020/hive:latest
     env_file:
       - ./hadoop-hive.env
     command: /opt/hive/bin/hive --service metastore
@@ -52,21 +77,21 @@ services:
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:latest
     container_name: hive-metastore-postgresql
-
-  #hive-metastore-mysql:
-    #image: mysql:5.7
-    #image: arm64v8/mysql:oracle
-    #restart: always
-    #environment:
-    #  MYSQL_DATABASE: 'mysqldb'
-    #  MYSQL_USER: 'hive'
-    #  MYSQL_PASSWORD: 'hive'
-    #  MYSQL_ROOT_PASSWORD: 'hive'
-    #ports:
-    #  - '3306:3306'
-    #expose:
-    #  - '3306'
-    #container_name: hive-metastore-mysql
+   
+  mysql:
+    image: mysql:5.7
+    image: arm64v8/mysql:oracle
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'mysqldb'
+      MYSQL_USER: 'hive'
+      MYSQL_PASSWORD: 'hive'
+      MYSQL_ROOT_PASSWORD: 'hive'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    container_name: mysql
 
   presto-coordinator:
     image: shawnzhu/prestodb:0.181
@@ -99,17 +124,25 @@ services:
       - NIFI_ELECTION_MAX_WAIT=1 min 
       - NIFI_SENSITIVE_PROPS_KEY=iksefhisfuzufdsfs
     volumes:
-      - ./drivers:/drivers
-      - nifi-conf:/opt/nifi  
+      - type: bind
+        source: ./drivers
+        target: /drivers
+      #- ./nifi/database_repository:/opt/nifi/nifi-current/database_repository
+      #- ./nifi/flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      #- ./nifi/content_repository:/opt/nifi/nifi-current/content_repository
+      #- ./nifi/provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      #- ./nifi/state:/opt/nifi/nifi-current/state
+      #- ./nifi/logs:/opt/nifi/nifi-current/logs
+      - nifisettings:/opt/nifi/conf   
     networks:
       net_pet:
-        ipv4_address: 172.27.1.18   
+        ipv4_address: 172.27.1.18
+       
+   
 volumes:
-  namenode:
-  datanode:
-  nifi-conf:
-     driver: local
-
+  nifisettings:
+  #namenode:
+  #datanode:
    
 
 networks:
@@ -118,3 +151,4 @@ networks:
       driver: default
       config:
         - subnet: 172.27.0.0/16
+

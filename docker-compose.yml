@@ -38,7 +38,7 @@ services:
     image: bde2020/hadoop-datanode:latest
     volumes:
       - type: bind
-        source: ${VOLUME_ROOT}/hadoop/dfs/name
+        source: ${VOLUME_ROOT}/hadoop/dfs/data
         target: /hadoop/dfs/data
     env_file:
       - ./hadoop-hive.env
@@ -66,6 +66,7 @@ services:
     command: /opt/hive/bin/hive --service metastore
     environment:
       SERVICE_PRECONDITION: "namenode:9870 datanode:9864 hive-metastore-postgresql:5432"
+      #SERVICE_PRECONDITION: "namenode:9870 datanode:9864 mysql:3306"
     ports:
       - "9083:9083"
     expose:
@@ -75,10 +76,14 @@ services:
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:latest
     container_name: hive-metastore-postgresql
+    volumes:
+       - type: bind
+         source: ${VOLUME_ROOT}/meta/postgredata
+         target: /var/lib/postgresql/data
    
 #  mysql:
 #    image: mysql:5.7
-#    image: arm64v8/mysql:oracle
+#    #image: arm64v8/mysql:oracle
 #    restart: always
 #    environment:
 #      MYSQL_DATABASE: 'mysqldb'

@@ -11,8 +11,6 @@ services:
       volumes:
          - ${VOLUME_ROOT}/hue/hue-conf/hue-overrides.ini:/usr/share/hue/desktop/conf/z-hue.ini
          #- ${VOLUME_ROOT}/hue/hue-conf/:/usr/share/hue/desktop/conf/
-      depends_on:
-         - "mysql"
       networks:
         net_pet:
           ipv4_address: 172.27.1.13
@@ -78,20 +76,20 @@ services:
     image: bde2020/hive-metastore-postgresql:latest
     container_name: hive-metastore-postgresql
    
-  mysql:
-    image: mysql:5.7
-    image: arm64v8/mysql:oracle
-    restart: always
-    environment:
-      MYSQL_DATABASE: 'mysqldb'
-      MYSQL_USER: 'hive'
-      MYSQL_PASSWORD: 'hive'
-      MYSQL_ROOT_PASSWORD: 'hive'
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
-    container_name: mysql
+#  mysql:
+#    image: mysql:5.7
+#    image: arm64v8/mysql:oracle
+#    restart: always
+#    environment:
+#      MYSQL_DATABASE: 'mysqldb'
+#      MYSQL_USER: 'hive'
+#      MYSQL_PASSWORD: 'hive'
+#      MYSQL_ROOT_PASSWORD: 'hive'
+#    ports:
+#      - '3306:3306'
+#    expose:
+#      - '3306'
+#    container_name: mysql
 
   presto-coordinator:
     image: shawnzhu/prestodb:0.181

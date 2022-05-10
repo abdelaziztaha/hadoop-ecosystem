@@ -5,7 +5,6 @@
 # such as common folders, etc.
 
 export VOLUME_ROOT=/home/aziztaha/datalake
-export USER=aziztaha
 echo "Crating directories in "$VOLUME_ROOT
 
 DRIVER_NAME=postgresql-42.3.4.jar
@@ -25,7 +24,4 @@ mkdir -p $VOLUME_ROOT/drivers
 
 wget https://jdbc.postgresql.org/download/$DRIVER_NAME
 mv $DRIVER_NAME $VOLUME_ROOT/drivers/$DRIVER_NAME
-
-#chown -R  $USER:$USER $VOLUME_ROOT
-
 

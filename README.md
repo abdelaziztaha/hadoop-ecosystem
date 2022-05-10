@@ -7,7 +7,7 @@ This Big Data Ecosystem is still not complete, but can already be run and tested
 
 **To run:**
 
-3- Execute the init.sh bash script to prepare directory structure on your lacal machine for persisting container volumes. This script is to be only once before the first run. Reruning it later has no effect.
+3- Adapt the VOLUME_ROOT variable in the init.sh and execute the init.sh bash script to prepare directory structure on your lacal machine for persisting container volumes. This script is to be only once before the first run. Reruning it later has no effect.
 
 2- run: docker-compose up
 

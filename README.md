@@ -1,6 +1,6 @@
 # Hadoop ecosystem
 
-**Sandbox for Big Data (Hadoop/Hive/NiFi):**
+**Sandbox for Big Data (Hadoop/Hive/NiFi/ATLAS/HUE):**
 
 This Big Data Ecosystem is still not complete, but can already be run and tested
 

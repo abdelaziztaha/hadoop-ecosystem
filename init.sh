@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This script should be run before starting the docker-expose
+# This script should be run before starting the docker-compose
 # This is the place to create setings in the host (outside the containers
-# such as common folders, etc.
+# such as common folders, etc.)
 
 export VOLUME_ROOT=/home/aziztaha/datalake
 echo "Crating directories in "$VOLUME_ROOT

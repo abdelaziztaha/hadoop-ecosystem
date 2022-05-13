@@ -1,0 +1,46 @@
+Warum Big Data und Hadoop so oft in einem Atemzug genannt werden
+Hadoop und Big Data sind eng miteinander verbunden und werden daher oft im selben Atemzug genannt – oder zumindest ist das eine nie weit, wenn die Sprache auf das andere kommt. Bezüge zu Big Data lassen sich in fast allen Aspekten herstellen, da Hadoop diesbezüglich zahlreiche Vorteile hat. Big Data entwickelt sich rasch zu einer immer größeren Herausforderung der modernen Digitalwelt, und Hadoop ist eine Möglichkeit, solche großen Datenmengen sinnvoll einzusetzen.
+
+Was ist Hadoop?
+Hadoop ist ein Open-Source-Framework, mit dem sich alle möglichen Speicher- und Verarbeitungsprozesse für sehr große Datenmengen handhaben lassen. Es handelt sich um eine vielseitige, leicht zugängliche Architektur aus Software-Bibliotheken. Dank seiner niedrigen Einstiegskosten und der umfangreichen Analyseoptionen stellt es eine attraktive Methode zur Verarbeitung von Big Data dar.
+
+Die Anfänge von Hadoop reichen in die frühen 2000er zurück, als es im Rahmen eines Suchmaschinen-Indizierungsmechanismus für schnellere Suchergebnisse entwickelt wurde. Dies war auch die Zeit, in der Google groß wurde. Während Google seinen Siegeszug vor allem mit der innovativen Websuche antrat, fand Hadoop in seiner Technologiearchitektur andere Möglichkeiten: Im Zentrum standen die technischen Gesichtspunkte der Datenspeicherung und -verarbeitung. Seinen Namen erhielt das Projekt nach einem Kuscheltier: „Hadoop“ hieß der Plüschelefant des Sohnes des Firmengründers.
+
+Was macht Hadoop und warum ist es überall zu finden?
+Hadoop besteht aus mehreren Teilen, die beim Parsen gespeicherter Daten ineinandergreifen. Die vier Grundbestandteile sind:
+Hadoop Common: die Grundfunktionen für die meisten Anwendungsfälle
+Hadoop Distributed File System (HDFS): zur Datenspeicherung in einem leicht zugänglichen Format
+Hadoop MapReduce: zur Datenverarbeitung durch Mapping eines großen Datensatzes und anschließendes Filtern nach bestimmten Ergebnissen
+Hadoop YARN: zur Ressourcen- und Kapazitätenverwaltung
+
+Die allgegenwärtige Präsenz von Hadoop erklärt sich durch seine leichte Verfügbarkeit und seinen benutzerfreundlichen Einstieg. Außerdem ist es erschwinglich und bietet mit seinen Modulen eine ansehnliche Anwendungsvielfalt. Hadoop lässt sich einfach auf Computer-Cluster und Datensätze praktisch jeder Größe skalieren, und sein Datenspeicher- und -verarbeitungsansatz macht es zur geeigneten Lösung für den ständig wachsenden Speicherbedarf großer Unternehmen.
+
+Einsatz von Hadoop für preisgünstige Analysen mit flexibler Hardware
+Das Problem bei der Speicherung großer Datenmengen ist der steigende Ressourcenbedarf, der die Hardware-Wartungskosten zusehends in die Höhe treibt. Hadoop ist vor allem deshalb so beliebt und weitverbreitet, weil es viel zugänglicher ist als andere Lösungen und einen flexiblen Hardware-Einsatz ermöglicht. Es nutzt sogenannte „Commodity-Hardware“, also serienmäßig produzierte, kostengünstige Standardsysteme. Proprietäre Systeme oder teure kundenspezifische Hardware sind für Hadoop nicht nötig, was Betriebskosten spart.
+
+Statt zur Datenverarbeitung kostspielige, hochperformante Hardware einzusetzen, verteilt Hadoop die Rechenleistung einfach auf mehrere Computer. So lässt sich das System für nahezu beliebig große Datensätze skalieren. Hauptnutznießer dieses Aufbaus sind vielfach IT-Mitarbeiter, denn sie haben mit Hadoop freie Wahl beim Kauf des für ihre Zwecke am besten geeigneten Hardwaretyps im gewünschten Umfang.
+
+Im Vergleich: Datenspeicherung in Data Warehouses und Data Lakes
+Hadoop verteilt nicht nur die Rechenlast, sondern verändert die ganze Art und Weise der Datenspeicherung und -analyse.
+
+Traditionell werden Daten in Data Warehouses – wörtlich übersetzt „Datenlager“ – gespeichert. Wie der Name andeutet, handelt es sich dabei um große Datensammlungen, die nach Informationstypen organisiert und systematisch „eingelagert“ werden. Neu gespeicherte Tabellen und Datensätze werden von Analysten strukturiert und gebündelt, sodass sie auf Anfrage abrufbar sind. Dazu müssen sämtliche Daten analysiert werden, denn nur dann lassen sie sich klassifizieren und später leicht auffinden.
+
+Data-Warehouse-Systeme eignen sich für Benutzer, die Zugriff auf bestimmte Tabellen benötigen, doch die im Vorhinein erforderliche Analyse und Speicherung ist zeit- und ressourcenintensiv. Hinzu kommt noch, dass Data Warehouses bei falscher Handhabung oft ineffizient sind: Daten ohne direkte Verwendungsmöglichkeit oder offensichtliche Funktion werden bei der Analyse möglicherweise übersehen oder gezielt ausgeschlossen. Da die Datenspeicherung mit der Zeit ein teures Vergnügen werden kann, braucht es eine gut durchdachte Strategie, wenn sich Analysten und IT-Mitarbeiter die strukturellen Vorteile von Data Warehouses zunutze machen wollen.
+
+Ganz anders verhält es sich bei Data Lakes, wörtlich „Datenseen“. Während Data Warehouses kontrolliert und katalogisiert sind, handelt es sich bei Data Lakes einfach um riesige Datensammlungen, in die alles Mögliche einfließt. Sämtliche Daten werden darin gespeichert – ob analysiert oder nicht, ob sofort einsetzbar oder vielleicht erst irgendwann in der Zukunft brauchbar. Daten werden in ihrer Rohform importiert und nur im Bedarfsfall analysiert. Da sich die Hardwarekosten bei Hadoop im Rahmen halten, ist eine Skalierung auf größere zu speichernde und zu parsende Datenmengen einfach. Der Haken: Es ist schwieriger, vorgefertigte Tabellen und freigegebene Datensätze sofort einsatzbereit zu halten – gerade hier können Data Warehouses punkten. Die Skalierung von Data Lakes verlangt daher auch eine Skalierung von Governance-Strategien und entsprechende Fortbildungsmaßnahmen.
+
+Beide Methoden der Datenspeicherung – Data Warehouses und Data Lakes – haben also ihre Vor- und Nachteile, weshalb Unternehmen oft beide für verschiedene Zwecke nutzen.
+
+Hadoop und das Internet der Dinge (IoT)
+Eine Stärke von Hadoop ist die Möglichkeit, damit unvorstellbare Mengen an Daten zu speichern und zu parsen. Big Data wird ständig größer. Noch vor fünf Jahren war die Menge der generierten Daten nur gut halb so groß wie heute. Vor fünfzehn Jahren wurden sogar täglich weniger Daten produziert als heute in etwa drei Minuten.
+
+Ein Hauptgrund für diese exorbitante Zunahme des Datenvolumens sind die in jüngster Zeit neu aufgekommenen Technologien, die unter dem Stichwort „Internet der Dinge“, kurz „IoT“, zusammengefasst werden. Gemeint sind alltägliche physische Gegenstände, die mit dem Internet verbunden sind und so aus der Ferne gesteuert werden können. Das IoT begann mit Smartphones, Smart-TVs und intelligenten Alarmanlagen. Inzwischen gibt es kaum noch ein Haushaltsgerät, das nicht in internetfähiger Ausführung erhältlich ist: Kühlschränke, Geschirrspüler, Thermostate, Glühlampen, Kaffeemaschinen, Überwachungskameras, Babyfone, Haustierkameras, Türschlösser, Staubsaugerroboter und so weiter. All diese Gerätschaften nehmen uns Arbeit ab, sie erfassen und speichern jedoch auch jede Menge Daten.
+
+Längst hat das IoT auch Unternehmen und Behörden erreicht. Intelligente Klimaanlagen sorgen für angenehme Arbeitsbedingungen, Body-Cams schützen Polizeibeamte und Zivilisten, Umgebungssensoren liefern Behörden wichtige Daten, um bei Naturkatastrophen wie Erdbeben oder Waldbränden schneller reagieren zu können.
+
+In der Summe fallen enorme Datenmengen an, die flexible Überwachungs- und bezahlbare Skalierungsmöglichkeiten verlangen. Genau hier kommen Systeme wie Hadoop ins Spiel, da sie die Speicherung von IoT-Daten vereinfachen. Hadoop ist nicht die einzige Option, aber im Kontext des stetig wachsenden IoT-Datenvolumens wohl die bekannteste.
+
+Big Data nützt nur, wenn es Verwendung dafür gibt
+Das Datenvolumen wächst unaufhörlich. Dafür braucht es nicht nur ständig mehr Speicher, sondern auch effektive Anwendungsmöglichkeiten. Sämtliche Daten rund um den Erdball lassen sich irgendwie speichern, aber was nützt das, wenn diese Daten – sinnbildlich gesprochen – ungenutzt herumliegen und Staub ansetzen? Hadoop bietet zwar einige Vorteile gegenüber anderen Datenspeichersystemen, doch die Datenspeicherung allein ist kein Ersatz für Datenanalysen oder Business Intelligence.
+
+Je größer die Datensammlung, desto höher sind auch die Speicherkosten. Wer seine Daten also nicht nutzt, um daraus gewinnbringende Erkenntnisse zu ziehen, gibt Unsummen für eine zwar stattliche, aber letztlich sinnlose Datensammlung mitsamt allem Verwaltungsaufwand aus. Vielleicht hilft es, sich solche Datensammlungen wie eine Goldader vorzustellen: Jemand kauft ein Stück Land, unter dem sich eine Goldader verbirgt, gräbt aber nicht danach. Er hat also jede Menge Geld für einen brachliegenden Acker verschwendet. Übertragen auf Big Data heißt das: Werden Systeme wie Hadoop richtig eingesetzt, wird der Landkauf etwas günstiger – das Gold liegt aber immer noch im Boden.

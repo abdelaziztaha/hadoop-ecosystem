@@ -137,6 +137,8 @@ services:
       - "9864:9864"
     container_name: datanode
 
+
+##############################
   hive-server:
     image: bde2020/hive:latest
     env_file:

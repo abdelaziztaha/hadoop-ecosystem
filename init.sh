@@ -22,6 +22,8 @@ mkdir -p $VOLUME_ROOT/atlas/models
 mkdir -p $VOLUME_ROOT/atlas/models/hadoop
 mkdir -p $VOLUME_ROOT/drivers
 
+cp testresources/WordCount.jar $VOLUME_ROOT/hadoop/applications/test
+
 wget https://jdbc.postgresql.org/download/$DRIVER_NAME
 mv $DRIVER_NAME $VOLUME_ROOT/drivers/$DRIVER_NAME
 

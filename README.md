@@ -1,3 +1,4 @@
+
 # Hadoop ecosystem
 
 **Sandbox for Big Data (Hadoop/Hive/NiFi/ATLAS/HUE):**
@@ -15,7 +16,7 @@ This Big Data Ecosystem is still not complete, but can already be run and tested
 
 ***Testing Hadoop:*** 
 
-....... A testing submit is coming soon
+To test Hadoop, change to the forlder testressources and execute the bash script testhadoop.sh. This script attempts to copy a text file to the hadoop file system and a word counting map reduce file to the local machine of the hadoop container. Then it calls the hadoop to execute the map reduce job and finally displays the results and cleans the files.
 
 ***Testing Hive:***
 
